@@ -8,7 +8,7 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
 
-export const EuroTzContext = createContext<DappContextType | null>(null);
+export const DappContext = createContext<DappContextType | null>(null);
 
 
 const DappProvider = ({ children }: DappProviderProps) => {
@@ -97,7 +97,7 @@ const DappProvider = ({ children }: DappProviderProps) => {
   }, []);
 
   return (
-    <EuroTzContext.Provider
+    <DappContext.Provider
       value={{
         connect,
         disconnect,
@@ -106,7 +106,7 @@ const DappProvider = ({ children }: DappProviderProps) => {
       }}
     >
       {children}
-    </EuroTzContext.Provider>
+    </DappContext.Provider>
   );
 };
 
