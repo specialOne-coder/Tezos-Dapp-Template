@@ -1,7 +1,7 @@
 import { useState, Component, useContext, useEffect } from "react";
 import styles from "../styles/style";
 import { Welcome } from "../Components";
-import { EuroTzContext } from "../context/DappContext";
+import { DappContext } from "../context/DappContext";
 
 const OtherPage = () => {
 
