@@ -7,7 +7,7 @@ import { navLinks, shortAddress } from "../../utils";
 import { Modal, rem } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Login from "../popup/Login";
-import { EuroTzContext } from "../../context/DappContext";
+import { DappContext } from "../../context/DappContext";
 import { DappContextType } from "../../context/dapp.type";
 import { connectedNavLinks } from "../../utils";
 import Profile from "../popup/Profile";
@@ -17,7 +17,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [openedTg, { open, close }] = useDisclosure(false);
   const { magicPkh, beaconPkh } = useContext(
-    EuroTzContext
+    DappContext
   ) as DappContextType;
 
 
@@ -72,7 +72,7 @@ const Navbar = () => {
         }
       </ul>
       <button
-        className="py-2 px-6 font-poppins font-medium text-[18px] text-black bg-white rounded-[10px] outline-none"
+        className="py-2 px-6 ml-4 font-poppins font-medium text-[18px] text-black bg-white rounded-[10px] outline-none"
         onClick={() => {
           open();
         }}

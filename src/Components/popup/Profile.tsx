@@ -9,11 +9,11 @@ import {
     IconX,
 } from "@tabler/icons-react";
 import { DappContextType } from "../../context/dapp.type";
-import { EuroTzContext } from "../../context/DappContext";
+import { DappContext } from "../../context/DappContext";
 import { IoSave } from "react-icons/io5";
 
 const Profile = (props: { close: any, address: string }) => {
-    const { disconnect } = useContext(EuroTzContext) as DappContextType;
+    const { disconnect } = useContext(DappContext) as DappContextType;
     const [name, setName] = useState<string>("");
 
     return (

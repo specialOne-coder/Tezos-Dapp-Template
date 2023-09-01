@@ -4,14 +4,14 @@ import { useDisclosure } from "@mantine/hooks";
 import { rem, Modal, Loader, Notification } from "@mantine/core";
 import Login from "../popup/Login";
 import { DappContextType } from "../../context/dapp.type";
-import { EuroTzContext } from "../../context/DappContext";
+import { DappContext } from "../../context/DappContext";
 import { IconCheck, IconCurrencyBitcoin, IconX } from "@tabler/icons-react";
 import { shortAddress } from "../../utils";
 
 const Welcome = () => {
   const [openedTg, { open, close }] = useDisclosure(false);
   const { magicPkh, beaconPkh } =
-    useContext(EuroTzContext) as DappContextType;
+    useContext(DappContext) as DappContextType;
 
   return (
     <section

@@ -10,10 +10,10 @@ import {
   IconWallet,
 } from "@tabler/icons-react";
 import { DappContextType } from "../../context/dapp.type";
-import { EuroTzContext } from "../../context/DappContext";
+import { DappContext } from "../../context/DappContext";
 
 const Login = (props: { close: any }) => {
-  const { connect } = useContext(EuroTzContext) as DappContextType;
+  const { connect } = useContext(DappContext) as DappContextType;
   const [email, setEmail] = useState<string>("");
 
   return (
